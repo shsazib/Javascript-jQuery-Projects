@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <div class="max-w-screen-md grid justify-center items-center mx-auto mt-20">
+    <h1 class="text-center text-[30px] font-medium">Let's Play Game</h1>
+    <h2 class="text-center text-[20px] font-medium"><span id="user_1_score">0</span> to <span id="user_2_score">0</span>
+    </h2>
+
+
+    <div class="flex justify-center gap-2 w-14 mx-auto">
+      <input type="text" id="min_input_Fild" placeholder="Min Value"
+        class="border border-green-600 p-2 rounded my-5 text-center outline-none">
+      <input type="text" id="max_input_Fild" placeholder="Max Value"
+        class="border border-green-600 p-2 rounded my-5 text-center outline-none">
+        <button id="set_min_max_value" class="bg-teal-700 px-5 py-2 rounded  text-white font-medium ">Set Min Max Value</button>
+    </div>
+
+    <p id="masseg"></p>
+
+    <div class="text-center">
+      <button id="user_1" class="bg-orange-600 px-5 py-2 rounded  text-white font-medium ">User 1</button>
+      <button id="user_2" class="bg-green-600 px-5 py-2 rounded  text-white font-medium ">User 2</button>
+      <button id="reset_btn" class="bg-red-600 px-5 py-2 rounded  text-white font-medium">Reset</button>
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
