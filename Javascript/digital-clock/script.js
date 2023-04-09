@@ -34,6 +34,7 @@ function dateTime() {
     myCurrentDate.innerHTML = currentDay;
 }
 dateTime()
+
 setInterval(() => {
     dateTime()
 }, 1000)
