@@ -4,38 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Live Weather</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
-    <div class="card">
-        <div class="search">
-            <input type="text" name="" id="" placeholder="Enter City Name" spellcheck="false">
-            <button class=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                    <path d="M21 21l-6 -6"></path>
-                </svg></button>
-        </div>
-        <div class="weather">
-            <h1 class="temp">22°c</h1>
-            <h2 class="city">New York</h2>
-            <div class="details">
-                <div class="">
-                    <div class="">
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
+    <div class="container">
+        <div class="card">
+            <h1 class="heading">Weather App</h1>
+            <div class="search">
+                <input type="text" placeholder="Enter City Name" spellcheck="false">
+                <button class=""><svg xmlns="http://www.w3.org/2000/svg" class="" width="30" height="30"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                        <path d="M21 21l-6 -6"></path>
+                    </svg></button>
+            </div>
+            <div class="weather">
+                <div class="weather_img">
+                    <img src="./images/clear.png" alt="weather_icon" class="weather_icon">
                 </div>
-                <div class="">
-                    <div class="">
-                        <p class="wind">15 km/h</p>
-                        <p>Wind Speed</p>
+                <h1 class="temp">22°c</h1>
+                <h2 class="city">New York</h2>
+                <div class="details">
+                    <div class="footer_content">
+                        <img src="./images/humidity.png" alt="img">
+                        <div class="footer_content_p">
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="footer_content">
+                        <img src="./images/wind.png" alt="img">
+                        <div class="footer_content_p">
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
                     </div>
                 </div>
             </div>

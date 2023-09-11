@@ -1,6 +1,141 @@
-.card{
-    margin: 100px;
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.weather{
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #547c7c;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.card {
+    background-image: linear-gradient(to right top, #23c788, #27bbc0, #3db3d6, #4593d8, #7d7ad4);
+    padding: 30px;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+}
+
+.weather {
     display: none;
+}
+
+.weather_img {
+    display: grid;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    justify-items: center;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.search button {
+    padding: 10px 15px;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background: #26bdb7;
+    color: white;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: #547c7cbd;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.temp {
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.city {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.footer_content img {
+    width: 35px;
+}
+
+.footer_content_p {
+    display: grid;
+    gap: 5px;
+}
+
+.footer_content_p p:first-child {
+    font-size: 22px;
+}
+
+.footer_content_p p:last-child {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 425px) {
+    .card {
+        padding: 15px;
+        margin: 0 10px 0 10px;
+    }
+
+    .search input {
+        padding: 7px 10px;
+        font-size: 18px;
+    }
+
+    .search button {
+        padding: 7px 10px;
+    }
+
+    .weather_icon {
+        width: 140px;
+    }
+
+    .temp {
+        font-size: 35px;
+    }
+
+    .city {
+        font-size: 25px;
+    }
+
+    .heading {
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
 }
