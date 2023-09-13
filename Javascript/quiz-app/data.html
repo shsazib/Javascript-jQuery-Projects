@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+
+<body>
+
+    <div class="m-5">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/data.html">Data</a></li>
+        </ul>
+        <ul class="demo">
+        </ul>
+    </div>
+
+    <script>
+        const demo = document.querySelector('.demo');
+        const showData = () => {
+            demo.innerHTML = localStorage.getItem('data');
+        }
+        showData();
+    </script>
+</body>
+
+</html>

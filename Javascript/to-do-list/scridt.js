@@ -15,13 +15,24 @@ const addTask = () => {
         li.appendChild(span)
     }
     input_box.value = '';
+    saveData();
 }
 
 list_container.addEventListener('click', (e) => {
     if (e.target.tagName == 'LI') {
-        e.target.classList.toggle('checked')
+        e.target.classList.toggle('checked');
+        saveData();
     }
     else if (e.target.tagName === 'SPAN') {
-        e.target.parentElement.remove()
+        e.target.parentElement.remove();
+        saveData();
     }
 })
+
+const saveData = () =>{
+    localStorage.setItem('data', list_container.innerHTML);
+}
+const showTask = () =>{
+    list_container.innerHTML = localStorage.getItem('data');
+}
+showTask()
