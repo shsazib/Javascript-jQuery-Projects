@@ -29,35 +29,25 @@
 <body>
 
     <div class="m-5">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/data.html">Data</a></li>
-        </ul>
-
-
-        <h1 class="text-4xl text-red-500">Hello New Project</h1>
-        <input type="text" class="input border p-2">
-        <button class="button border p-2">Save</button>
+        <div class="app">
+            <h1 class="text-2xl font-bold py-2">Simple quiz</h1>
+            <div class="quiz">
+                <h2 id="question" class="text-xl py-2"></h2>
+                <div id="answer_btn" class="grid gap-5">
+                    <button class="btn border p-2 hover:bg-slate-200">answer 1</button>
+                    <button class="btn border p-2 hover:bg-slate-200">answer 2</button>
+                    <button class="btn border p-2 hover:bg-slate-200">answer 3</button>
+                    <button class="btn border p-2 hover:bg-slate-200">answer 4</button>
+                </div>
+                <button id="next_btn" class="border py-2 px-5 mt-5 bg-green-500 font-bold rounded text-white">Next</button>
+            </div>
+        </div>
     </div>
 
-    <script>
-        const input = document.querySelector('.input');
-        const button = document.querySelector('.button');
 
-        button.addEventListener('click', () => {
-            const list = document.createElement('LI');
-            list.innerHTML = input.value;
-            demo.appendChild(list)
-            input.value = '';
-            saveData();
 
-        });
 
-        const saveData = () => {
-            localStorage.setItem('data', demo.innerHTML);
-        }
-        window.location.href = 'data.html';
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
