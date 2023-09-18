@@ -44,7 +44,7 @@ const showQuestion = () => {
     button.innerHTML = answer.text;
     button.classList.add("btn");
     answerButton.appendChild(button);
-    button.addEventListener('click', selectAnswer)
+    button.addEventListener("click", selectAnswer);
   });
 };
 
@@ -55,37 +55,33 @@ const resetState = () => {
   }
 };
 
-const selectAnswer = () => {
-
-}
-
-
+const selectAnswer = () => {};
 
 startQuiz();
 
+var arrNumber = ["sazib", "sakib", "sagor", "saju"];
 
+// var tex = arrNumber[0];
 
+// for(var i = 0; i < arrNumber.length; i++){
 
+//   console.log(arrNumber[i]);
+// };
 
+var demo = document.querySelector(".demo");
+var input = document.querySelector(".input");
+var button = document.querySelector(".button");
 
-var arrNumber = [10, 14, 11, 1, 25, 89, 145];
+var text = arrNumber[0];
 
-// var result = arr.reduce((prevValue, currentValue) =>{
-//   return Math.min(prevValue, currentValue)
-// })
-
-var max = arrNumber[0];
-
-for (var i = 0; i < arrNumber.length; i++) {
-  if (arrNumber[i] > max) {
-    max = arrNumber[i]
-    console.log(arrNumber[i]);
+button.addEventListener("click", () => {
+  if(input.value == '') {
+    alert("Please enter a valid value")
   }
-}
-console.log(max);
-
-// var text = ''
-// for(var i = 0; i < 10;  i++){
-//   text += "The number is " + i;
-// }
-// console.log(text);
+  for (var i = 0; i < arrNumber.length; i++) {
+    if (input.value == arrNumber[i]) {
+      demo.innerHTML = input.value;
+    }
+  }
+  input.value = '';
+});
