@@ -44,6 +44,9 @@ const showQuestion = () => {
     button.innerHTML = answer.text;
     button.classList.add("btn");
     answerButton.appendChild(button);
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
     button.addEventListener("click", selectAnswer);
   });
 };
@@ -55,33 +58,14 @@ const resetState = () => {
   }
 };
 
-const selectAnswer = () => {};
+const selectAnswer = (e) => {
+  const selecetedBtn = e.target;
+  const isCorrect = selecetedBtn.dataset.correct === 'true';
+  if (isCorrect) {
+    selecetedBtn.classList.add('correct');
+  } else {
+    selecetedBtn.classList.add('incorrect');
+  }
+};
 
 startQuiz();
-
-var arrNumber = ["sazib", "sakib", "sagor", "saju"];
-
-// var tex = arrNumber[0];
-
-// for(var i = 0; i < arrNumber.length; i++){
-
-//   console.log(arrNumber[i]);
-// };
-
-var demo = document.querySelector(".demo");
-var input = document.querySelector(".input");
-var button = document.querySelector(".button");
-
-var text = arrNumber[0];
-
-button.addEventListener("click", () => {
-  if(input.value == '') {
-    alert("Please enter a valid value")
-  }
-  for (var i = 0; i < arrNumber.length; i++) {
-    if (input.value == arrNumber[i]) {
-      demo.innerHTML = input.value;
-    }
-  }
-  input.value = '';
-});
