@@ -1,11 +1,21 @@
-.btn{
+.btn {
     border: 1px solid #ddd;
     padding: 5px;
 }
 
-.correct{
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+.correct {
     background-color: rgba(0, 128, 0, 0.672);
 }
-.incorrect{
+
+.incorrect {
     background-color: rgba(255, 0, 0, 0.637);
 }

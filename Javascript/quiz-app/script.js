@@ -63,9 +63,45 @@ const selectAnswer = (e) => {
   const isCorrect = selecetedBtn.dataset.correct === 'true';
   if (isCorrect) {
     selecetedBtn.classList.add('correct');
+    score++;
   } else {
     selecetedBtn.classList.add('incorrect');
   }
+  Array.from(answerButton.children).forEach(button => {
+    if (button.dataset.correct === 'true') {
+      button.classList.add('correct');
+    }
+    button.disabled = true;
+  });
+  nextButton.style.display = "block";
 };
+
+
+const showScore = () => {
+  resetState();
+  questionElement.innerHTML = `your srores ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+}
+
+
+const handleNextButton = () => {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  }
+  else {
+    showScore();
+  }
+}
+
+
+nextButton.addEventListener('click', () => {
+  if (currentQuestionIndex < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+})
 
 startQuiz();
