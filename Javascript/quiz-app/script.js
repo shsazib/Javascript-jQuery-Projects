@@ -67,6 +67,7 @@ const selectAnswer = (e) => {
   } else {
     selecetedBtn.classList.add('incorrect');
   }
+  
   Array.from(answerButton.children).forEach(button => {
     if (button.dataset.correct === 'true') {
       button.classList.add('correct');
@@ -89,7 +90,7 @@ const handleNextButton = () => {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
-  }
+  } 
   else {
     showScore();
   }
